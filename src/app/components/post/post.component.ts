@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+
 import {IPost} from "../../models/IPost";
 
 @Component({
@@ -9,7 +10,7 @@ import {IPost} from "../../models/IPost";
 export class PostComponent implements OnInit {
 
   @Input()
-  post!: IPost;
+  post: IPost;
 
   constructor() { }
 

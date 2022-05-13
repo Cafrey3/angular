@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+
 import {IComment} from "../models/IComment";
 
 @Injectable({
@@ -15,11 +16,11 @@ export class CommentService {
 
   getComments(): Observable<IComment[]> {
     return this.http
-      .get<any[]>(this.url);
+      .get<IComment[]>(this.url);
   }
 
   getComment(id: number): Observable<IComment[]> {
     return this.http
-      .get<any[]>(this.url + '/' + id);
+      .get<IComment[]>(this.url + '/' + id);
   }
 }

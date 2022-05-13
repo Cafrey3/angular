@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+
 import {IComment} from "../../models/IComment";
 
 @Component({
@@ -9,7 +10,7 @@ import {IComment} from "../../models/IComment";
 export class CommentComponent implements OnInit {
 
   @Input()
-  comment!: IComment;
+  comment: IComment;
 
   constructor() {
   }
