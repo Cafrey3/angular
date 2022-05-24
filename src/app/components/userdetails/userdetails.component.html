@@ -1,10 +1,12 @@
-<ul>
-  <li>{{userDetails.id}}</li>
-  <li>{{userDetails.name}}</li>
-  <li>{{userDetails.username}}</li>
-  <li>{{userDetails.email}}</li>
-  <li>{{userDetails.address}}</li>
-  <li>{{userDetails.phone}}</li>
-  <li>{{userDetails.website}}</li>
-  <li>{{userDetails.company}}</li>
-</ul>
+<div *ngIf="userDetails">
+  <ul>
+    <li><b>id:</b> {{userDetails.id}}</li>
+    <li><b>name:</b> {{userDetails.name}}</li>
+    <li><b>username:</b> {{userDetails.username}}</li>
+    <li><b>email:</b> {{userDetails.email}}</li>
+    <li><b>address:</b> {{userDetails.address}}</li>
+    <li><b>phone:</b> {{userDetails.phone}}</li>
+    <li><b>website:</b> {{userDetails.website}}</li>
+    <li><b>company:</b> {{userDetails.company}}</li>
+  </ul>
+</div>
