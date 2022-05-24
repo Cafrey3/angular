@@ -1,4 +1,5 @@
 <p>
   {{posts.id}}.
   {{posts.title}}
+  <a routerLink="post/details/{{posts.id}}" [state]="{data: posts}">Details</a>
 </p>

@@ -1,4 +1,5 @@
 <p>
   {{comments.id}}.
   {{comments.name}}
+  <a routerLink="comment/details/{{comments.id}}" [state]="{data:comments}">Details</a>
 </p>
