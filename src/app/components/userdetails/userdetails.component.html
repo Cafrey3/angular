@@ -4,9 +4,23 @@
     <li><b>name:</b> {{userDetails.name}}</li>
     <li><b>username:</b> {{userDetails.username}}</li>
     <li><b>email:</b> {{userDetails.email}}</li>
-    <li><b>address:</b> {{userDetails.address}}</li>
+    <li><b>address:</b>
+      <ul>
+        <li>{{userDetails.address.street}}</li>
+        <li>{{userDetails.address.city}}</li>
+        <li>{{userDetails.address.zipcode}}</li>
+        <li>{{userDetails.address.suite}}</li>
+        <li>{{userDetails.address.geo.lat}} - {{userDetails.address.geo.lng}}</li>
+      </ul>
+    </li>
     <li><b>phone:</b> {{userDetails.phone}}</li>
     <li><b>website:</b> {{userDetails.website}}</li>
-    <li><b>company:</b> {{userDetails.company}}</li>
+    <li><b>company:</b>
+      <ul>
+        <li>{{userDetails.company.name}}</li>
+        <li>{{userDetails.company.catchPhrase}}</li>
+        <li>{{userDetails.company.bs}}</li>
+      </ul>
+    </li>
   </ul>
 </div>
