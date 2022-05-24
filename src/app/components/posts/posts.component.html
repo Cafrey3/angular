@@ -1,5 +1,11 @@
 <h1>Posts</h1>
-<app-post *ngFor="let p of posts" [posts] = 'p'></app-post>
-<hr>
 
-<router-outlet></router-outlet>
+<div class="posts">
+  <div>
+    <app-post *ngFor="let p of posts" [posts]='p'></app-post>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
