@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: dodgerblue;
+  height: 100px;
+  width: 100%;
+  align-items: center;
+}
+
+.container a {
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+.container a:hover {
+  color: lightgrey;
+  transition: 0.2s;
+}
+
