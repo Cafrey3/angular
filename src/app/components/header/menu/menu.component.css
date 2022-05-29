@@ -5,6 +5,7 @@
   height: 100px;
   width: 100%;
   align-items: center;
+  box-shadow: 0 3px 10px 0 darkgray;
 }
 
 .container a {
@@ -19,4 +20,5 @@
   color: lightgrey;
   transition: 0.2s;
 }
+
 

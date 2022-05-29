@@ -10,6 +10,7 @@ let routes: Routes = [
   {path: 'comments', loadChildren: () => import('./components/comments/comments.module').then(v => v.CommentsModule)}
 ];
 
+
 @NgModule({
   imports: [
     RouterModule.forRoot(routes)
