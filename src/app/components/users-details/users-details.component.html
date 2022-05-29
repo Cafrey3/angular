@@ -1,1 +1,31 @@
-<p>users-details works!</p>
+<div *ngIf="userDetails">
+  <ul>
+    <li><b>id: </b>{{userDetails.id}}</li>
+    <li><b>name: </b>{{userDetails.name}}</li>
+    <li><b>email: </b>{{userDetails.email}}</li>
+    <li><b>username: </b>{{userDetails.username}}</li>
+    <li><b>address:</b>
+      <ul>
+        <li><b>street: </b>{{userDetails.address.street}}</li>
+        <li><b>suite: </b>{{userDetails.address.suite}}</li>
+        <li><b>city: </b>{{userDetails.address.city}}</li>
+        <li><b>zipcode: </b>{{userDetails.address.zipcode}}</li>
+        <li><b>geo: </b>
+          <ul>
+            <li><b>lat: </b>{{userDetails.address.geo.lat}}</li>
+            <li><b>lng: </b>{{userDetails.address.geo.lng}}</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><b>phone: </b>{{userDetails.phone}}</li>
+    <li><b>website: </b>{{userDetails.website}}</li>
+    <li><b>company:</b>
+      <ul>
+        <li><b>name: </b>{{userDetails.company.name}}</li>
+        <li><b>catchPhrase: </b>{{userDetails.company.catchPhrase}}</li>
+        <li><b>bs: </b>{{userDetails.company.bs}}</li>
+      </ul>
+    </li>
+  </ul>
+</div>

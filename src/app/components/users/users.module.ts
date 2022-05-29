@@ -6,12 +6,14 @@ import {UsersComponent} from './users-components/users/users.component';
 import {HttpClientModule} from "@angular/common/http";
 import {UsersServices} from "./users-services/users -services";
 import {UserComponent} from "../user/user.component";
+import {UsersDetailsComponent} from "../users-details/users-details.component";
 
 
 @NgModule({
   declarations: [
     UsersComponent,
-    UserComponent
+    UserComponent,
+    UsersDetailsComponent
   ],
   exports: [
     UsersComponent
