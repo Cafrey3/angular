@@ -1,7 +1,8 @@
 import {HttpClient} from "@angular/common/http";
 import {Injectable} from "@angular/core";
 import {Observable} from "rxjs";
-import {IUser} from "../../../interfaces/IUser";
+
+import {UserInterface} from "../../../interfaces/user.interface";
 
 @Injectable({
   providedIn: 'root'
@@ -14,10 +15,10 @@ export class UsersServices {
   constructor(private http:HttpClient) {
   }
 
-  getUsers(): Observable<IUser[]> {
-    return this.http.get<IUser[]>(this._url);
+  getUsers(): Observable<UserInterface[]> {
+    return this.http.get<UserInterface[]>(this._url);
   }
-  getUser(id: string): Observable<IUser> {
-    return this.http.get<IUser>(this._url + '/' + id);
+  getUser(id: string): Observable<UserInterface> {
+    return this.http.get<UserInterface>(this._url + '/' + id);
   }
 }

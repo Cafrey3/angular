@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {ICommentDetails} from "../../interfaces/ICommentDetails";
 import {ActivatedRoute} from "@angular/router";
+
+import {CommentDetailsInterface} from "../../interfaces/comment-details.interface";
 
 @Component({
   selector: 'app-comments-details',
@@ -9,15 +10,15 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class CommentsDetailsComponent implements OnInit {
 
-  commentDetails: ICommentDetails;
+  commentDetails: CommentDetailsInterface;
 
   constructor(private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(value => {
+    this.activatedRoute.params.subscribe(()=> {
       let {state: {data}} = history;
-      this.commentDetails = data as ICommentDetails;
+      this.commentDetails = data as CommentDetailsInterface;
     });
   }
 

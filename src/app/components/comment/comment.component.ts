@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IComment} from "../../interfaces/IComment";
+
+import {CommentInerface} from "../../interfaces/comment.inerface";
 
 @Component({
   selector: 'app-comment',
@@ -9,7 +10,7 @@ import {IComment} from "../../interfaces/IComment";
 export class CommentComponent implements OnInit {
 
   @Input()
-  comment: IComment;
+  comment: CommentInerface;
 
   constructor() {
   }

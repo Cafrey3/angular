@@ -1,7 +1,8 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {IComment} from "../../../interfaces/IComment";
+
+import {CommentInerface} from "../../../interfaces/comment.inerface";
 
 @Injectable({
   providedIn: 'root'
@@ -13,11 +14,11 @@ export class CommentsService {
   constructor(private http: HttpClient) {
   }
 
-  getComments(): Observable<IComment[]> {
-    return this.http.get<IComment[]>(this._url)
+  getComments(): Observable<CommentInerface[]> {
+    return this.http.get<CommentInerface[]>(this._url)
   }
 
-  getComment(id: string): Observable<IComment> {
-    return this.http.get<IComment>(this._url + '/' + id)
+  getComment(id: string): Observable<CommentInerface> {
+    return this.http.get<CommentInerface>(this._url + '/' + id)
   }
 }
