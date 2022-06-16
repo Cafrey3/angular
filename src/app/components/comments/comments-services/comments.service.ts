@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 
 import {CommentInerface} from "../../../interfaces/comment.inerface";
+import {CommentDetailsInterface} from "../../../interfaces/comment-details.interface";
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,7 @@ export class CommentsService {
     return this.http.get<CommentInerface[]>(this._url)
   }
 
-  getComment(id: string): Observable<CommentInerface> {
-    return this.http.get<CommentInerface>(this._url + '/' + id)
+  getComment(id: string): Observable<CommentDetailsInterface[]> {
+    return this.http.get<CommentDetailsInterface[]>(this._url + '/' + id)
   }
 }

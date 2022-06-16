@@ -3,11 +3,18 @@ import {RouterModule, Routes} from '@angular/router';
 
 import {CommentsComponent} from "./comments components/comments/comments.component";
 import {CommentsDetailsComponent} from "../comments-details/comments-details.component";
+import {CommentsResolver} from "./comments-services/resolves/comments.resolver";
+import {CommentDetailsResolver} from "./comments-services/resolves/comment-details.resolver";
 
 const routes: Routes = [
   {
-    path: '', component: CommentsComponent, children: [
-      {path: ':id', component: CommentsDetailsComponent}
+    path: '', component: CommentsComponent,
+    resolve: {data: CommentsResolver},
+    children: [
+      {
+        path: ':id', component: CommentsDetailsComponent,
+        resolve: {data: CommentDetailsResolver}
+      }
     ]
   }
 ];

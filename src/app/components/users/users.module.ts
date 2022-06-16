@@ -7,6 +7,8 @@ import {UsersComponent} from './users-components/users/users.component';
 import {UsersServices} from "./users-services/users -services";
 import {UserComponent} from "../user/user.component";
 import {UsersDetailsComponent} from "../users-details/users-details.component";
+import {UsersResolver} from "./users-services/resolves/users.resolver";
+import {UsersDetailsResolver} from "./users-services/resolves/users-details.resolver";
 
 
 @NgModule({
@@ -23,7 +25,11 @@ import {UsersDetailsComponent} from "../users-details/users-details.component";
     UsersRoutingModule,
     HttpClientModule,
   ],
-  providers: [UsersServices]
+  providers: [
+    UsersServices,
+    UsersResolver,
+    UsersDetailsResolver
+  ]
 })
 export class UsersModule {
 }
